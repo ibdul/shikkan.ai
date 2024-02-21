@@ -1,7 +1,6 @@
 import { ThemeProvider } from "next-themes";
 import "../css/tailwind.css";
 import Navbar from "../components/navbar";
-import Cta from "../components/cta";
 import PopupWidget from "../components/popupWidget";
 import Footer from "../components/footer";
 import Head from "next/head";
@@ -19,7 +18,6 @@ function MyApp({ Component, pageProps }) {
       </Head>
       <Navbar />
       <Component {...pageProps} />
-      <Cta />
       <Footer />
       <PopupWidget />
     </ThemeProvider>

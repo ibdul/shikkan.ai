@@ -6,6 +6,7 @@ import Video from "../components/video";
 import Benefits from "../components/benefits";
 import Testimonials from "../components/testimonials";
 import Faq from "../components/faq";
+import Cta from "../components/cta";
 
 const Home = () => {
   return (
@@ -32,6 +33,7 @@ const Home = () => {
       <Testimonials />
       <SectionTitle pretitle="FAQs" title="Frequently Asked Questions">These are questions we frequently get.</SectionTitle>
       <Faq />
+      <Cta />
     </>
   );
 }
