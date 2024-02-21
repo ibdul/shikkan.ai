@@ -15,7 +15,7 @@ const Home = () => {
       <div id="learn-more">
         <SectionTitle
           pretitle="Let's get started"
-          title="Upload Your MRI Scan">Welcome to the Upload Scan page of Shikkan.ai. Here, you can securely upload your MRI scan for analysis by our advanced machine learning models.</SectionTitle>
+          title="Upload Your MRI Scan">In the scan page, you can securely upload your MRI scan for analysis by our advanced machine learning models.</SectionTitle>
       </div>
       <Benefits data={benefitOne} />
       <Benefits imgPos="right" data={benefitTwo} />
