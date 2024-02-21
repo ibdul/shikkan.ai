@@ -5,10 +5,9 @@ import Container from "./container";
 
 export default function Footer() {
   const navigation = [
-    "Product",
-    "Features",
-    "Pricing",
+    "Scan",
     "Company",
+    "Partners",
     "Blog",
   ];
   const legal = ["Terms", "Privacy", "Legal"];
@@ -27,15 +26,11 @@ export default function Footer() {
                       height="32"
                       className="w-8"
                     />
-                  <span>Nextly</span>
+                  <span>Shikkan.ai</span>
               </Link>
             </div>
 
-            <div className="max-w-md mt-4 text-gray-500 dark:text-gray-400">
-              Nextly is a free landing page & marketing website
-              template for startups and indie projects. Its built with
-              Next.js & TailwindCSS. And its completely open-source.
-            </div>
+            <div className="max-w-md mt-4 text-gray-500 dark:text-gray-400">Welcome to Shikkan.ai, where cutting-edge technology meets compassionate care.</div>
 
             <div className="mt-5">
               <a
@@ -75,28 +70,28 @@ export default function Footer() {
             <div>Follow us</div>
             <div className="flex mt-5 space-x-5 text-gray-400 dark:text-gray-500">
               <a
-                href="https://twitter.com/web3templates"
+                href="#"
                 target="_blank"
                 rel="noopener">
                 <span className="sr-only">Twitter</span>
                 <Twitter />
               </a>
               <a
-                href="https://facebook.com/web3templates"
+                href="#"
                 target="_blank"
                 rel="noopener">
                 <span className="sr-only">Facebook</span>
                 <Facebook />
               </a>
               <a
-                href="https://instagram.com/web3templates"
+                href="#"
                 target="_blank"
                 rel="noopener">
                 <span className="sr-only">Instagram</span>
                 <Instagram />
               </a>
               <a
-                href="https://linkedin.com/"
+                href="#"
                 target="_blank"
                 rel="noopener">
                 <span className="sr-only">Linkedin</span>
@@ -108,23 +103,10 @@ export default function Footer() {
 
         <div className="my-10 text-sm text-center text-gray-600 dark:text-gray-400">
           Copyright © {new Date().getFullYear()}. Made with ♥ by{" "}
-          <a
-            href="https://web3templates.com/"
-            target="_blank"
-            rel="noopener">
-            Web3Templates.
-          </a>{" "}
-          Illustrations from{" "}
-          <a
-            href="https://www.glazestock.com/"
-            target="_blank"
-            rel="noopener ">
-            Glazestock
-          </a>
+          Shikkan.ai
+          {" "}
         </div>
       </Container>
-      {/* Do not remove this */}
-      <Backlink />
     </div>
   );
 }

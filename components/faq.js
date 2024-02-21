@@ -35,22 +35,34 @@ const Faq = () => {
 
 const faqdata = [
   {
-    question: "Is this template completely free to use?",
-    answer: "Yes, this template is completely free to use.",
+    question: "Is my data secure with Shikkan.ai?",
+    answer: "Yes, absolutely. We prioritize the security and privacy of your data. All information and MRI scans uploaded to Shikkan.ai are encrypted and stored securely. We adhere to strict privacy protocols and comply with relevant data protection regulations.",
   },
   {
-    question: "Can I use it in a commercial project?",
-    answer: "Yes, this you can.",
+    question: "What types of MRI scans does Shikkan.ai analyze?",
+    answer: "Shikkan.ai analyzes MRI scans of the brain, kidney, and abdomen. Our advanced machine learning models can detect various abnormalities and health indicators in these areas, providing comprehensive insights into your health status.",
   },
   {
-    question: "What is your refund policy? ",
+    question: "How long does it take to receive analysis results?",
     answer:
-      "If you're unhappy with your purchase for any reason, email us within 90 days and we'll refund you in full, no questions asked.",
+      "The analysis process typically takes just a few moments. Once you upload your MRI scan, our machine learning algorithms work swiftly to analyze the data and generate detailed results. You'll receive your analysis report promptly via our platform.",
   },
   {
-    question: "Do you offer technical support? ",
+    question: "Can I trust the accuracy of the analysis results?",
     answer:
-      "No, we don't offer technical support for free downloads. Please purchase a support plan to get 6 months of support.",
+      "Yes, you can trust the accuracy of the analysis results provided by Shikkan.ai. Our machine learning models are trained on vast amounts of data and undergo rigorous testing to ensure precision and reliability. While no analysis is perfect, we strive for the highest level of accuracy in our assessments.",
+  },
+  {
+    question: "Are the recommendations provided by Shikkan.ai personalized?",
+    answer: "Yes, indeed. Shikkan.ai offers personalized recommendations based on the analysis findings of your MRI scan. Our AI chatbot is available to provide tailored advice and guidance, taking into account your unique health profile and concerns."
+  },
+  {
+    question:"Can I discuss the analysis results with a healthcare professional?",
+    answer:"Absolutely. While Shikkan.ai provides valuable insights and recommendations, we always encourage users to consult with qualified healthcare professionals for further evaluation and guidance. Our platform complements traditional healthcare services and is not a substitute for medical advice."
+  },
+  {
+    question:"How can I contact Shikkan.ai for support or inquiries?",
+    answer:"You can reach out to our support team via email at support@shikkan.ai. We're here to assist you with any questions, concerns, or technical issues you may encounter. Additionally, you can use the contact form on our website to submit inquiries, and we'll respond promptly."
   },
 ];
 

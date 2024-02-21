@@ -13,42 +13,39 @@ const Testimonials  = () => {
         <div className="lg:col-span-2 xl:col-auto">
           <div className="flex flex-col justify-between w-full h-full bg-gray-100 px-14 rounded-2xl py-14 dark:bg-trueGray-800">
             <p className="text-2xl leading-normal ">
-              Share a real <Mark>testimonial</Mark>
-              that hits some of your benefits from one of your popular customer.
+              Shikkan.ai has been a <Mark>game-changer</Mark> for me. As someone managing a chronic health condition, the ability to quickly and accurately assess MRI scans has been invaluable. The personalized recommendations provided have truly enhanced my quality of life.
             </p>
 
             <Avatar
               image={userOneImg}
               name="Sarah Steiner"
-              title="VP Sales at Google"
+              title="New York"
             />
           </div>
         </div>
         <div className="">
           <div className="flex flex-col justify-between w-full h-full bg-gray-100 px-14 rounded-2xl py-14 dark:bg-trueGray-800">
             <p className="text-2xl leading-normal ">
-              Make sure you only pick the <Mark>right sentence</Mark>
-              to keep it short and simple.
+              I was initially apprehensive about uploading my MRI scan online, but Shikkan.ai's <Mark>commitment to privacy and security</Mark> reassured me. The analysis results were incredibly thorough, and the chatbot feature was a helpful resource for understanding the findings. Highly recommended!
             </p>
 
             <Avatar
               image={userTwoImg}
               name="Dylan Ambrose"
-              title="Lead marketer at Netflix"
+              title="Carlifornia"
             />
           </div>
         </div>
         <div className="">
           <div className="flex flex-col justify-between w-full h-full bg-gray-100 px-14 rounded-2xl py-14 dark:bg-trueGray-800">
             <p className="text-2xl leading-normal ">
-              This is an <Mark>awesome</Mark> landing page template I&apos;ve seen. I
-              would use this for anything.
+              As a healthcare professional, I'm impressed by the <Mark>precision and efficiency</Mark> of Shikkan.ai's AI analysis. The platform has become an essential tool in my practice, allowing me to deliver timely and informed care to my patients. Keep up the excellent work!
             </p>
 
             <Avatar
               image={userThreeImg}
               name="Gabrielle Winn"
-              title="Co-founder of Acme Inc"
+              title="Radiologist"
             />
           </div>
         </div>
