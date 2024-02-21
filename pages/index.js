@@ -1,4 +1,3 @@
-import Head from "next/head";
 import Hero from "../components/hero";
 import SectionTitle from "../components/sectionTitle";
 
@@ -11,14 +10,6 @@ import Faq from "../components/faq";
 const Home = () => {
   return (
     <>
-      <Head>
-        <title>Shikkan.ai - Empowering Health Through AI Analysis</title>
-        <meta
-          name="description"
-          content="Our AI-driven platform harnesses the power of machine learning to analyze MRI scans of the brain, kidney, and abdomen with unparalleled accuracy. Within moments, we provide comprehensive insights into potential tumors, hemorrhages, and other critical health indicators."
-        />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
 
       <Hero />
       <div id="learn-more">
