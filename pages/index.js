@@ -1,16 +1,12 @@
 import Head from "next/head";
 import Hero from "../components/hero";
-import Navbar from "../components/navbar";
 import SectionTitle from "../components/sectionTitle";
 
 import { benefitOne, benefitTwo } from "../components/data";
 import Video from "../components/video";
 import Benefits from "../components/benefits";
-import Footer from "../components/footer";
 import Testimonials from "../components/testimonials";
-import Cta from "../components/cta";
 import Faq from "../components/faq";
-import PopupWidget from "../components/popupWidget";
 
 const Home = () => {
   return (
@@ -24,13 +20,14 @@ const Home = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Navbar />
       <Hero />
-      <SectionTitle
-        pretitle="what we do"
-        title="Unlocking Insights, Transforming Lives">
-        Our AI-driven platform harnesses the power of machine learning to analyze MRI scans of the brain, kidney, and abdomen with unparalleled accuracy. Within moments, we provide comprehensive insights into potential tumors, hemorrhages, and other critical health indicators.
-      </SectionTitle>
+      <div id="learn-more">
+        <SectionTitle
+          pretitle="what we do"
+          title="Unlocking Insights, Transforming Lives">
+          Our AI-driven platform harnesses the power of machine learning to analyze MRI scans of the brain, kidney, and abdomen with unparalleled accuracy. Within moments, we provide comprehensive insights into potential tumors, hemorrhages, and other critical health indicators.
+        </SectionTitle>
+      </div>
       <Benefits data={benefitOne} />
       <Benefits imgPos="right" data={benefitTwo} />
       <SectionTitle
@@ -47,9 +44,6 @@ const Home = () => {
       <Testimonials />
       <SectionTitle pretitle="FAQs" title="Frequently Asked Questions">These are questions we frequently get.</SectionTitle>
       <Faq />
-      <Cta />
-      <Footer />
-      <PopupWidget />
     </>
   );
 }
