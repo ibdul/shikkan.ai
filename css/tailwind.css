@@ -7,4 +7,10 @@
   body {
     @apply dark:bg-trueGray-900;
   }
+  .btn {
+    @apply px-8 py-4 text-lg font-medium text-center text-white bg-indigo-600 rounded-md;
+  }
+  .input {
+    @apply px-8 py-4 text-lg font-medium rounded-md w-full;
+  }
 }
