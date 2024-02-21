@@ -13,11 +13,8 @@ const Home = () => {
     <>
       <Hero />
       <div id="learn-more">
-        <SectionTitle
-          pretitle="Let's get started"
-          title="Upload Your MRI Scan">In the scan page, you can securely upload your MRI scan for analysis by our advanced machine learning models.</SectionTitle>
-      </div>
       <Benefits data={benefitOne} />
+      </div>
       <Benefits imgPos="right" data={benefitTwo} />
       <SectionTitle
         pretitle="Watch a review"
