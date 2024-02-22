@@ -13,4 +13,11 @@
   .input {
     @apply px-8 py-4 text-lg font-medium rounded-md w-full border;
   }
+
+  .heading-base {
+    @apply max-w-2xl mt-3 font-bold leading-snug tracking-tight text-gray-800 lg:leading-tight lg:text-4xl dark:text-white
+  }
+  .heading-3 {
+    @apply heading-base text-2xl;
+  }
 }

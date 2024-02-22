@@ -62,4 +62,49 @@ const benefitTwo = {
 };
 
 
-export {benefitOne, benefitTwo};
+const positive_feedback = {
+  title: "What You Should Do Next",
+  desc: "These are some things you sould do to improve your condition.",
+  image: benefitOneImg,
+  bullets: [
+    {
+      title: " Consultation with Healthcare Professional",
+      desc: "We recommend scheduling a consultation with a healthcare professional specializing in [relevant medical field]. They can provide further evaluation and create a personalized treatment plan tailored to your needs.",
+      icon: <FaceSmileIcon />,
+    },
+    {
+      title: "Follow-Up Scans",
+      desc: "Regular follow-up scans may be necessary to monitor the progression of the condition and assess the effectiveness of treatment.",
+      icon: <FaceSmileIcon />,
+    },
+    {
+      title: "Lifestyle Modifications",
+      desc: "Adopting healthy lifestyle habits such as [dietary changes, exercise, stress management] can support your overall well-being and improve treatment outcomes." ,
+      icon: <FaceSmileIcon />,
+    },
+  ],
+};
+
+const negative_feedback = {
+  title: "What You Should Do",
+  desc: "These are some things you sould do to improve your condition.",
+  image: benefitOneImg,
+  bullets: [
+    {
+      title: "Routine Check-Ups",
+      desc: "While your scan results are negative, it's still important to schedule regular check-ups with your healthcare provider to monitor your health status.",
+      icon: <FaceSmileIcon />,
+    },
+    {
+      title: "Healthy Lifestyle Practices",
+      desc: "Maintain a balanced diet, engage in regular physical activity, manage stress effectively, and avoid harmful habits such as smoking or excessive alcohol consumption.",
+      icon: <FaceSmileIcon />,
+    },
+    {
+      title: "Stay Informed",
+      desc: "Educate yourself about preventive healthcare measures and stay informed about any potential risk factors associated with your health profile." ,
+      icon: <FaceSmileIcon />,
+    },
+  ],
+};
+export {benefitOne, benefitTwo, positive_feedback, negative_feedback};
