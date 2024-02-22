@@ -18,14 +18,14 @@ const Scan = () => {
             <label>
               Name:
               <br/>
-              <input name="name" className="input" placeholder="Enter your full name here" />
+              <input name="name" className="input" placeholder="Enter your full name here" required />
             </label>
           </div>
           <div>
             <label>
               Email: 
               <br/>
-              <input name="email" className="input" placeholder="Enter your email here" />
+              <input name="email" className="input" placeholder="Enter your email here" required />
             </label>
           </div>
           <div>
@@ -37,6 +37,13 @@ const Scan = () => {
                   <option className="input" key={index} value={scan_option}>{scan_option}</option>
                 ))}
               </select>
+            </label>
+          </div>
+          <div>
+            <label>
+              File:
+              <br/>
+              <input type="file" name="file" required />
             </label>
           </div>
           <div className="flex justify-end">
