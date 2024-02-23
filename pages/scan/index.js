@@ -2,14 +2,17 @@
 import { useState } from "react";
 import Container from "../../components/container";
 import SectionTitle from "../../components/sectionTitle";
+import { useRouter } from "next/router";
 
 const Scan = () => {
   const scan_options = "Brain MRI, Kidney MRI, Abdomen MRI".split(", ")
+  const router = useRouter()
 
   const [form, setForm] = useState({
     name:"",
     email:"",
-    scan_type:scan_options[0]
+    scan_type:scan_options[0],
+    file: undefined,
   })
 
 
@@ -38,7 +41,6 @@ const Scan = () => {
       <div className="container mx-auto max-w-4xl ">
         <form className="text-left space-y-4 w-full" onSubmit={submitForm}>
           <div>
-            {JSON.stringify(form)}
             <label>
               Name:
               <br/>
