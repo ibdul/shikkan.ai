@@ -1,8 +1,19 @@
 import Container from "../../components/container";
 import {positive_feedback, negative_feedback} from "../../components/data";
 import Benefits from "../../components/benefits";
+import { useEffect, useState } from "react";
+import {useSearchParams} from "next/navigation"
 
 const Scan = () => {
+  const [is_positive, setIsPositive] = useState(false)
+  const [scan_type, setScanType] = useState()
+  const search_params = useSearchParams()
+
+  useEffect(()=>{
+    setIsPositive(search_params.get("result") == "true")
+    setScanType(search_params.get("scan_type"))
+  },[])
+
   return (
     <>
       <Container className="">
@@ -27,12 +38,17 @@ const Scan = () => {
               <h3 className="max-w-2xl mt-3 text-3xl font-bold leading-snug tracking-tight text-gray-800 lg:leading-tight lg:text-4xl dark:text-white">
                 Analysis Findings:
               </h3>
+              {is_positive?(
               <p className="max-w-2xl py-4 text-lg leading-normal text-gray-500 lg:text-xl xl:text-xl dark:text-gray-300">
-                Based on our advanced AI analysis, your MRI scan indicates the presence of [health condition]. While this news may be concerning, it's important to remember that early detection is key to effective management and treatment.
+                Based on our advanced AI analysis, your MRI scan indicates the presence of [Ailment]. While this news may be concerning, it's important to remember that early detection is key to effective management and treatment.
               </p>
+
+              ):(
+
               <p className="max-w-2xl py-4 text-lg leading-normal text-gray-500 lg:text-xl xl:text-xl dark:text-gray-300">
                 Great news! Your MRI scan does not indicate any significant abnormalities or health concerns. However, it's important to continue prioritizing your health and well-being through proactive measures.
               </p>
+              )}
             </div>
           </div>
         </div>
@@ -42,8 +58,11 @@ const Scan = () => {
         </div>
       </Container>
 
+              {is_positive?(
       <Benefits data={positive_feedback} />
+      ):(
       <Benefits data={negative_feedback} />
+        )}
 
       <Container className="flex flex-wrap mb-20 lg:gap-10 items-stretch lg:flex-nowrap ">
 
@@ -54,12 +73,16 @@ const Scan = () => {
               <h3 className="max-w-2xl mt-3 text-3xl font-bold leading-snug tracking-tight text-gray-800 lg:leading-tight lg:text-4xl dark:text-white">
                 Chat with our AI bot
               </h3>
+
+              {is_positive?(
               <p className="max-w-2xl py-4 text-lg leading-normal text-gray-500 lg:text-xl xl:text-xl dark:text-gray-300">
                 Have questions or need guidance? Our AI chatbot is here to assist you. Feel free to ask about managing symptoms, understanding treatment options, or any other concerns you may have. We're here to support you every step of the way.
               </p>
+              ):(
               <p className="max-w-2xl py-4 text-lg leading-normal text-gray-500 lg:text-xl xl:text-xl dark:text-gray-300">
                 Our AI chatbot is available to provide personalized tips and advice for maintaining optimal health. Whether you have questions about preventive measures or general wellness tips, we're here to support you on your health journey.
               </p>
+              )}
             </div>
           </div>
         </div>
@@ -78,7 +101,15 @@ const Scan = () => {
             <li>
               <div className="flex justify-end gap-2 items-end">
                 <div className="rounded-lg bg-gray-100 dark:bg-gray-800 p-3 text-sm">
-                  Hello! How can I assist you today?
+                  Hello!
+                </div>
+                <div className="text-xs text-gray-500 dark:text-gray-400">2:14pm</div>
+              </div>
+            </li>
+            <li>
+              <div className="flex items-end gap-2">
+                <div className="rounded-lg bg-gray-100 dark:bg-gray-800 p-3 text-sm">
+                  typing...
                 </div>
                 <div className="text-xs text-gray-500 dark:text-gray-400">2:14pm</div>
               </div>
