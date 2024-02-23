@@ -1,9 +1,28 @@
 
+import { useState } from "react";
 import Container from "../../components/container";
 import SectionTitle from "../../components/sectionTitle";
 
 const Scan = () => {
   const scan_options = "Brain MRI, Kidney MRI, Abdomen MRI".split(", ")
+
+  const [form, setForm] = useState({
+    name:"",
+    email:"",
+    scan_type:scan_options[0]
+  })
+
+
+  const [is_submitting, setIsSubmitting] = useState(false)
+  const [result, setResult] = useState(false)
+
+  function submitForm(e){
+    e.preventDefault()
+    setIsSubmitting(true)
+
+    setIsSubmitting(false)
+    router.push(`/scan/result?type=${form.scan_type}&result=${result}`)
+  }
   return (
     <>
 
@@ -17,26 +36,27 @@ const Scan = () => {
       </Container>
 
       <div className="container mx-auto max-w-4xl ">
-        <form className="text-left space-y-4 w-full">
+        <form className="text-left space-y-4 w-full" onSubmit={submitForm}>
           <div>
+            {JSON.stringify(form)}
             <label>
               Name:
               <br/>
-              <input name="name" className="input" placeholder="Enter your full name here" required />
+              <input name="name" className="input" placeholder="Enter your full name here" required onChange={e=>setForm({...form,name:e.target.value})} value={form.name} />
             </label>
           </div>
           <div>
             <label>
               Email: 
               <br/>
-              <input name="email" className="input" placeholder="Enter your email here" required />
+              <input name="email" className="input" placeholder="Enter your email here" required onChange={e=>setForm({...form,email:e.target.value})} value={form.email} />
             </label>
           </div>
           <div>
             <label>
               Scan type:
               <br/>
-              <select name="scan" required className="input">
+              <select name="scan" required className="input" onChange={e=>setForm({...form,scan_type:e.target.value})}>
                 {scan_options.map((scan_option, index)=>(
                   <option className="input" key={index} value={scan_option}>{scan_option}</option>
                 ))}
