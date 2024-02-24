@@ -40,7 +40,7 @@ const Scan = () => {
               </h3>
               {is_positive?(
               <p className="max-w-2xl py-4 text-lg leading-normal text-gray-500 lg:text-xl xl:text-xl dark:text-gray-300">
-                Based on our advanced AI analysis, your MRI scan indicates the presence of [Ailment]. While this news may be concerning, it's important to remember that early detection is key to effective management and treatment.
+                Based on our advanced AI analysis, your MRI scan indicates the presence of an Hemorrhage. While this news may be concerning, it's important to remember that early detection is key to effective management and treatment.
               </p>
 
               ):(

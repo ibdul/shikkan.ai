@@ -15,11 +15,17 @@ function MyApp({ Component, pageProps }) {
           content="Our AI-driven platform harnesses the power of machine learning to analyze MRI scans of the brain, kidney, and abdomen with unparalleled accuracy. Within moments, we provide comprehensive insights into potential tumors, hemorrhages, and other critical health indicators."
         />
         <link rel="icon" href="/favicon.ico" />
+
+        <link rel="stylesheet" href="https://cdn-chatbot.autogon.ai/style.css" />
+      <script src="https://cdn-chatbot.autogon.ai/index.min.js" defer></script>
+      <script>
+        var CHAT_AGENT_ID = "145e8f3f-2d39-4174-8c90-b05961d9b6b8"
+      </script>
       </Head>
       <Navbar />
       <Component {...pageProps} />
       <Footer />
-      <PopupWidget />
+      {/* <PopupWidget /> */}
     </ThemeProvider>
   );
 }

@@ -20,19 +20,22 @@ const Scan = () => {
   const [result, setResult] = useState(false)
 
   function submitForm(e){
+    let _result = form.file.split("\\")
+    _result = _result[_result.length - 1].split(".")[0]
+    _result = _result.split(" ")
+    _result = _result[_result.length - 1]
+
     e.preventDefault()
     setIsSubmitting(true)
 
     setTimeout(()=>{
-    router.push(`/scan/result?type=${form.scan_type}&result=${result}`)
+    router.push(`/scan/result?type=${form.scan_type}&result=${_result  === "positive"}`)
     setIsSubmitting(false)
-    }, 2000)
+    }, 7000)
 
   }
   return (
     <>
-
-
       <Container className="space-y-2">
         <SectionTitle
           pretitle="Form"
@@ -72,12 +75,12 @@ const Scan = () => {
             <label>
               File:
               <br/>
-              <input type="file" name="file" required onChange={console.log} />
+              <input type="file" name="file" required onChange={e=>form.file = e.target.value} />
             </label>
           </div>
           <div className="flex justify-end">
             {is_submitting? (
-            <p className="text-center btn">Submitting...</p>
+            <p className="flex gap-2 text-center items-center btn"> <span className="w-4 h-4 animate-spin block aspect-square border-2 border-white rounded-full  border-t-transparent" /> Submitting...</p>
             ):(
             <button className="btn">Submit</button>
               )}
