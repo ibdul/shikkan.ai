@@ -23,8 +23,11 @@ const Scan = () => {
     e.preventDefault()
     setIsSubmitting(true)
 
-    setIsSubmitting(false)
+    setTimeout(()=>{
     router.push(`/scan/result?type=${form.scan_type}&result=${result}`)
+    setIsSubmitting(false)
+    }, 2000)
+
   }
   return (
     <>
@@ -69,16 +72,22 @@ const Scan = () => {
             <label>
               File:
               <br/>
-              <input type="file" name="file" required />
+              <input type="file" name="file" required onChange={console.log} />
             </label>
           </div>
           <div className="flex justify-end">
-            <button className="btn"> Submit </button>
+            {is_submitting? (
+            <p className="text-center btn">Submitting...</p>
+            ):(
+            <button className="btn">Submit</button>
+              )}
           </div>
           <p className="opacity-50">If you have any questions or encounter any issues during the upload process, please don't hesitate to contact our support team at support@shikkan.ai. We're here to assist you every step of the way.</p>
-          <p>
-            After the analysis is complete, you'll receive results outlining the findings of your MRI scan. These insights will help you better understand your health and make informed decisions about your well-being.
-          </p>
+          {is_submitting&&(
+            <p>
+              After the analysis is complete, you'll receive results outlining the findings of your MRI scan. These insights will help you better understand your health and make informed decisions about your well-being.
+            </p>
+          )}
         </form>
       </div>
     </>
